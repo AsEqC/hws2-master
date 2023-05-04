@@ -33,9 +33,10 @@ function Affair(props: AffairPropsType) {
             </div>
 
             <button
-                onClick={()=>deleteCallback(props.affair._id)}
                 id={'hw2-button-delete-' + props.affair._id}
                 className={buttonClass}
+                onClick={()=>deleteCallback(props.affair._id)}
+
                 // need to fix
 
             >
