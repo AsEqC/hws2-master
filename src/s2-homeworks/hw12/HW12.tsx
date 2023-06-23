@@ -12,8 +12,12 @@ import {AppStoreType} from "../hw10/bll/store";
 * 3 - дописать тип и логику функции change
 * 4 - передать пропсы в SuperSelect
 * */
+type themesType = {
+  id: number
+  value: string
+}
 
-const themes = [
+const themes: themesType[] = [
     {id: 1, value: 'light'},
     {id: 2, value: 'blue'},
     {id: 3, value: 'dark'},
@@ -24,8 +28,8 @@ const HW12 = () => {
     const themeId = useSelector<AppStoreType,number>(state => state.theme.themeId)
     const dispatch = useDispatch()
 
-    const change = (id: any) => { // дописать функцию
-      dispatch(changeThemeId(id))
+    const change = (id: number) => { // дописать функцию
+      dispatch(changeThemeId(+id))
     }
 
     useEffect(() => {
@@ -44,7 +48,6 @@ const HW12 = () => {
                     className={s.select}
                     options={themes}
                     onChangeOption={change}
-
                 />
             </div>
         </div>
