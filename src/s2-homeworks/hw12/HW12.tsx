@@ -46,8 +46,8 @@ const HW12 = () => {
                 <SuperSelect
                     id={'hw12-select-theme'}
                     className={s.select}
-                    options={themes}
                     onChangeOption={change}
+                    options={themes}
                 />
             </div>
         </div>
