@@ -38,7 +38,7 @@ const HW13 = () => {
                 setImage(success200)
                 console.log(res)
                 setText('...всё ок)')
-                setInfo('Успешно')
+                setInfo('код 200 - обычно означает что скорее всего всё ок)')
 
             })
             .catch((e) => {
